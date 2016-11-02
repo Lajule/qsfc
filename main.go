@@ -11,6 +11,9 @@ import (
 )
 
 type Configuration struct {
+	Version       string `json:"version"`
+	ClientId      string `json:"clientid"`
+	ClientSecret  string `json:"clientsecret"`
 	UserName      string `json:"username"`
 	Password      string `json:"password"`
 	SecurityToken string `json:"securitytoken"`
@@ -29,9 +32,9 @@ func NewConfiguration(path string) *Configuration {
 
 func NewForceApi(config *Configuration) *force.ForceApi {
 	forceApi, err := force.Create(
-		"YOUR-API-VERSION",
-		"YOUR-CLIENT-ID",
-		"YOUR-CLIENT-SECRET",
+		config.Version,
+		config.ClientId,
+		config.ClientSecret,
 		config.UserName,
 		config.Password,
 		config.SecurityToken,
