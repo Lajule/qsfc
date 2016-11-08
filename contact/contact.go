@@ -18,5 +18,5 @@ func (c *Contact) ApiName() string {
 }
 
 func (c *Contact) CSV() string {
-	return fmt.Sprintf("%s;%s;%s;%s;%s;%s", c.Id, c.Name, c.Email, c.MobilePhone, c.Title, c.Department)
+	return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s", c.Id, c.Name, c.Email, c.MobilePhone, c.Title, c.Department)
 }

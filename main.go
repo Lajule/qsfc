@@ -46,14 +46,12 @@ func NewForceApi(config *Configuration) *force.ForceApi {
 	return forceApi
 }
 
-var configFlag string
 var countFlag bool
 
 func init() {
-	flag.StringVar(&configFlag, "config", "./config.json", "Path to config file")
-	flag.BoolVar(&countFlag, "c", false, "Counts Salesforce contacts")
+	flag.BoolVar(&countFlag, "n", false, "Counts the number of Salesforce contacts")
 	flag.Usage = func() {
-		fmt.Println("Usage: qsfc [flags] ...")
+		fmt.Printf("Usage: %s [flags] file\n", os.Args[0])
 		flag.PrintDefaults()
 	}
 }
@@ -72,7 +70,7 @@ func print(forceApi *force.ForceApi, response *contact.ContactQueryResponse) {
 
 func main() {
 	flag.Parse()
-	config := NewConfiguration(configFlag)
+	config := NewConfiguration(flag.Arg(0))
 	forceApi := NewForceApi(config)
 	response := contact.Contacts(forceApi)
 	if countFlag {
