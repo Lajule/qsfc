@@ -14,16 +14,14 @@ type ContactQueryResponse struct {
 func Contacts(forceApi *force.ForceApi) *ContactQueryResponse {
 	contacts := &ContactQueryResponse{}
 	query := force.BuildQuery("Id, Name, Email, MobilePhone, Title, Department", "Contact", nil)
-	err := forceApi.Query(query, contacts)
-	if err != nil {
+	if err := forceApi.Query(query, contacts); err != nil {
 		log.Fatal(err)
 	}
 	return contacts
 }
 
 func NextContacts(forceApi *force.ForceApi, contacts *ContactQueryResponse) *ContactQueryResponse {
-	err := forceApi.QueryNext(contacts.NextRecordsUri, contacts)
-	if err != nil {
+	if err := forceApi.QueryNext(contacts.NextRecordsUri, contacts); err != nil {
 		log.Fatal(err)
 	}
 	return contacts

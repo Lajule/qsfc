@@ -20,9 +20,17 @@ type Configuration struct {
 	Environment   string `json:"environment"`
 }
 
+func OpenConfiguration(path string) *os.File {
+	file, err := os.Open(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return file
+}
+
 func NewConfiguration(path string) *Configuration {
 	config := Configuration{}
-	file, _ := os.Open(path)
+	file := OpenConfiguration(path)
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&config); err != nil {
 		log.Fatal(err)
