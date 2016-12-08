@@ -14,12 +14,28 @@ go get github.com/Lajule/qsfc
 go build
 ```
 
+# Configuration
+
+The configuration file looks like this:
+
+```
+{
+  "version": "YOUR-API-VERSION",
+  "clientid": "YOUR-CLIENT-ID",
+  "clientsecret": "YOUR-CLIENT-SECRET",
+  "username": "YOUR-USERNAME",
+  "password": "YOUR-PASSWORD",
+  "securitytoken": "YOUR-SECURITY-TOKEN",
+  "environment": "YOUR-ENVIRONMENT"
+}
+```
+
 # Usage
 
 Type the following command `qsfc -h` to display this help message:
 
 ```
-qsfc [flags] file
+qsfc [flags] configfile
   -n	Counts the number of Salesforce contacts
 ```
 
