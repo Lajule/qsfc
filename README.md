@@ -16,6 +16,8 @@ go build
 
 # Usage
 
+Type the following command `qsfc -h` to display this help message:
+
 ```
 qsfc [flags] file
   -n	Counts the number of Salesforce contacts
