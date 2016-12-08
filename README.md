@@ -14,6 +14,15 @@ go get github.com/Lajule/qsfc
 go build
 ```
 
+# Usage
+
+Type the following command `qsfc -h` to display this help message:
+
+```
+qsfc [flags] configfile
+  -n	Counts the number of Salesforce contacts
+```
+
 # Configuration
 
 The configuration file looks like this:
@@ -28,15 +37,6 @@ The configuration file looks like this:
   "securitytoken": "YOUR-SECURITY-TOKEN",
   "environment": "YOUR-ENVIRONMENT"
 }
-```
-
-# Usage
-
-Type the following command `qsfc -h` to display this help message:
-
-```
-qsfc [flags] configfile
-  -n	Counts the number of Salesforce contacts
 ```
 
 # Example
