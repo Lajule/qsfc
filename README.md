@@ -42,7 +42,7 @@ The configuration file looks like this:
 # Example
 
 ```
-qsfc config.json | cut -d$'\t' -f3 | xargs -I email mail -s "Happy new year" <<EOF
+qsfc config.json | cut -d$'\t' -f3 | xargs -I email mail -s "Happy new year" email <<EOF
 > Dear customer,
 > We wish you a happy new year.
 >
