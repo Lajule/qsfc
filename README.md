@@ -8,7 +8,7 @@ Query Salesforce contacts from command line.
 go get github.com/Lajule/qsfc
 ```
 
-> This binary uses [go-force][1] library
+> This binary uses [go-force][1] library.
 
 # Build
 
