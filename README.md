@@ -14,7 +14,7 @@ go get github.com/Lajule/qsfc
 
 Type the following command `qsfc -h` to display this help message:
 
-```
+```sh
 qsfc [flags] configfile
   -n	Counts the number of Salesforce contacts
 ```
