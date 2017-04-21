@@ -4,7 +4,7 @@ Query Salesforce contacts from command line.
 
 # Installation
 
-```
+```sh
 go get github.com/Lajule/qsfc
 ```
 
@@ -37,7 +37,7 @@ The configuration file looks like this:
 
 # Example
 
-```
+```sh
 qsfc config.json | cut -d$'\t' -f3 | xargs -I email mail -s "Happy new year" email <<EOF
 > Dear customer,
 > We wish you a happy new year.
