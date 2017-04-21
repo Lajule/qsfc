@@ -8,6 +8,8 @@ Query Salesforce contacts from command line.
 go get github.com/Lajule/qsfc
 ```
 
+> This binary uses [go-force][1] library
+
 # Build
 
 ```
@@ -50,3 +52,5 @@ qsfc config.json | cut -d$'\t' -f3 | xargs -I email mail -s "Happy new year" ema
 > The DEV team
 > EOF
 ```
+
+[1]: https://github.com/nimajalali/go-force "go-force"
