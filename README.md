@@ -23,7 +23,7 @@ qsfc [flags] configfile
 
 The configuration file looks like this:
 
-```
+```json
 {
   "version": "YOUR-API-VERSION",
   "clientid": "YOUR-CLIENT-ID",
