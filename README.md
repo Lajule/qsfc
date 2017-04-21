@@ -10,12 +10,6 @@ go get github.com/Lajule/qsfc
 
 > This binary uses [go-force][1] library.
 
-# Build
-
-```
-go build
-```
-
 # Usage
 
 Type the following command `qsfc -h` to display this help message:
