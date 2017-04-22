@@ -35,6 +35,19 @@ The configuration file looks like this:
 }
 ```
 
+# Output
+
+This program outputs following fields for all contacts:
+
+* Id
+* Name
+* Email
+* MobilePhone
+* Title
+* Department
+
+> Fields are separated by `\t`.
+
 # Example
 
 ```sh
