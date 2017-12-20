@@ -17,6 +17,7 @@ Type the following command `qsfc -h` to display this help message:
 ```
 qsfc [flags] configfile
   -n	Counts the number of Salesforce contacts
+  -w	Displays results with header
 ```
 
 # Configuration
