@@ -55,9 +55,11 @@ func NewForceApi(config *Configuration) *force.ForceApi {
 }
 
 var countFlag bool
+var headerFlag bool
 
 func init() {
 	flag.BoolVar(&countFlag, "n", false, "Counts the number of Salesforce contacts")
+	flag.BoolVar(&headerFlag, "w", false, "Displays results with header")
 	flag.Usage = func() {
 		fmt.Printf("Usage: %s [flags] file\n", os.Args[0])
 		flag.PrintDefaults()
@@ -65,6 +67,9 @@ func init() {
 }
 
 func print(forceApi *force.ForceApi, response *contact.ContactQueryResponse) {
+	if headerFlag {
+		fmt.Println(contact.Header())
+	}
 	for {
 		for _, c := range response.Records {
 			fmt.Println(c.CSV())
@@ -82,6 +87,9 @@ func main() {
 	forceApi := NewForceApi(config)
 	response := contact.Contacts(forceApi)
 	if countFlag {
+		if headerFlag {
+			fmt.Println("TotalSize")
+		}
 		fmt.Printf("%v\n", response.TotalSize)
 	} else {
 		print(forceApi, response)

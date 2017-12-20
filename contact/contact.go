@@ -13,6 +13,10 @@ type Contact struct {
 	Department  string `force:"Department"`
 }
 
+func Header() string {
+	return "Id\tName\tEmail\tMobilePhone\tTitle\tDepartment"
+}
+
 func (c *Contact) ApiName() string {
 	return "Contact"
 }
