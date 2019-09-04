@@ -2,7 +2,7 @@
 
 Query Salesforce contacts from command line.
 
-# Installation
+## Installation
 
 ```sh
 go get github.com/Lajule/qsfc
@@ -10,7 +10,7 @@ go get github.com/Lajule/qsfc
 
 > This binary uses [go-force][1] library.
 
-# Usage
+## Usage
 
 Type the following command `qsfc -h` to display this help message:
 
@@ -20,7 +20,7 @@ qsfc [flags] configfile
   -w	Displays results with header
 ```
 
-# Configuration
+## Configuration
 
 The configuration file looks like this:
 
@@ -36,7 +36,7 @@ The configuration file looks like this:
 }
 ```
 
-# Output
+## Output
 
 This program outputs following fields for all contacts:
 
@@ -49,7 +49,7 @@ This program outputs following fields for all contacts:
 
 > Fields are separated by `\t`.
 
-# Example
+## Example
 
 ```sh
 qsfc config.json | cut -d$'\t' -f3 | xargs -I email mail -s "Happy new year" email <<EOF
