@@ -38,7 +38,7 @@ The configuration file looks like this:
 
 ## Output
 
-This program outputs following fields for all contacts:
+This program displays following fields for all contacts:
 
 * Id
 * Name
